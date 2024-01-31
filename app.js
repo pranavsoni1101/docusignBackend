@@ -17,6 +17,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
 
+var connectDb = require('./db');
+// var db = require('./db');
 
 // initialize express
 var app = express();
@@ -34,6 +36,10 @@ var app = express();
         secure: false, // set this to true on production
     }
 }));
+
+// Connect to MongoDb
+connectDb();
+// console.log("Db from app: ", db.)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
