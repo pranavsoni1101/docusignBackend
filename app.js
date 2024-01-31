@@ -5,23 +5,23 @@
 
 require('dotenv').config();
 
-var path = require('path');
-var express = require('express');
-var session = require('express-session');
-var createError = require('http-errors');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var cors = require('cors');
+let path = require('path');
+let express = require('express');
+let session = require('express-session');
+let createError = require('http-errors');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+let cors = require('cors');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var authRouter = require('./routes/auth');
+let indexRouter = require('./routes/index');
+let usersRouter = require('./routes/users');
+let authRouter = require('./routes/auth');
 
-var connectDb = require('./config/db');
-// var db = require('./db');
+let connectDb = require('./config/db');
+// let db = require('./db');
 
 // initialize express
-var app = express();
+let app = express();
 
 /**
  * Using express-session middleware for persistent user session. Be sure to
