@@ -17,7 +17,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
 
-var connectDb = require('./db');
+var connectDb = require('./config/db');
 // var db = require('./db');
 
 // initialize express
