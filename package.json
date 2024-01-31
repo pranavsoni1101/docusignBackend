@@ -1,0 +1,22 @@
+{
+  "name": "docusignclone-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@azure/msal-node": "^2.6.2",
+    "axios": "^1.6.7",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^16.4.1",
+    "express": "~4.16.1",
+    "express-session": "^1.18.0",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "mongodb": "^6.3.0",
+    "morgan": "~1.9.1"
+  }
+}
