@@ -16,6 +16,7 @@ let cors = require('cors');
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 let authRouter = require('./routes/auth');
+let pdfRouter = require('./routes/pdf');
 let connectToDb = require('./db');
 
 // initialize express
@@ -53,6 +54,7 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
+app.use('/pdf', pdfRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
