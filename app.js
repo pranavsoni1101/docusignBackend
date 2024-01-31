@@ -16,9 +16,7 @@ let cors = require('cors');
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 let authRouter = require('./routes/auth');
-
-let connectDb = require('./config/db');
-// let db = require('./db');
+let connectToDb = require('./db');
 
 // initialize express
 let app = express();
@@ -37,9 +35,8 @@ let app = express();
     }
 }));
 
-// Connect to MongoDb
-connectDb();
-// console.log("Db from app: ", db.)
+// connect to database
+connectToDb();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
