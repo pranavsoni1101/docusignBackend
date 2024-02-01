@@ -17,6 +17,7 @@ let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 let authRouter = require('./routes/auth');
 let pdfRouter = require('./routes/pdf');
+let pdfMulterRouter = require('./routes/pdfMulter');
 let connectToDb = require('./db');
 
 // initialize express
@@ -55,6 +56,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/pdf', pdfRouter);
+app.use('/pdfMulter', pdfMulterRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
