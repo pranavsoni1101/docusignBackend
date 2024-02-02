@@ -44,7 +44,9 @@ router.post('/upload', upload.single('signature'), async (req, res) => {
       // Create a new document in MongoDB
       const newSignature = new Signature({
         name: req.file.originalname || randomstring.generate(10),
-        data: req.file.buffer,
+        // data: req.file.buffer,
+        data: req.file.buffer.toString('base64'), // Assuming data is stored as base64 string
+        type: req.body.type
       });
       await newSignature.save();
   
