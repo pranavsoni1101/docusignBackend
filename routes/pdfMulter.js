@@ -55,13 +55,13 @@ router.post('/upload', upload.single('pdf'), async (req, res) => {
   }
 });
 
-router.delete('/pdf/:id', async (req, res) => {
+router.delete('/deleteFile/:id', async (req, res) => {
   try {
     const pdf = await PDF.findById(req.params.id);
     if (!pdf) {
       return res.status(404).json({ message: 'PDF not found' });
     }
-    await pdf.remove();
+    await pdf.deleteOne();
     return res.status(200).json({ message: 'PDF deleted successfully' });
   } catch (error) {
     console.error(error);
